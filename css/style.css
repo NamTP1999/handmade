@@ -629,3 +629,37 @@ nav ul li a {
 .credits {
   font-size: 13px;
 }
+
+/* snowflakes */
+#snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  width: 6px; /* Thay đổi kích thước của tuyết */
+  height: 6px; /* Thay đổi kích thước của tuyết */
+  background-color: #f6bd3e; /* Thay đổi màu sắc của tuyết */
+  border-radius: 50%; /* Tạo hình dạng tròn cho tuyết */
+  pointer-events: none;
+  animation-name: snowfall-diagonal;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes snowfall-diagonal {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}

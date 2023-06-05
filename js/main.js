@@ -155,3 +155,17 @@ $(window).load(function(){
   });
 
 })
+// ========================================================================= //
+// snowflake
+// ========================================================================= //
+function createSnowflake() {
+  const snowflake = document.createElement("div");
+  snowflake.className = "snowflake";
+  snowflake.style.left = Math.random() * 100 + "%";
+  document.getElementById("snow-container").appendChild(snowflake);
+  setTimeout(function() {
+    snowflake.remove();
+  }, 20000); // Xóa tuyết rơi sau 10 giây
+}
+
+setInterval(createSnowflake, 2000); // Tạo một tuyết rơi mới mỗi 2000ms
