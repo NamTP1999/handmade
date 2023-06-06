@@ -169,3 +169,23 @@ function createSnowflake() {
 }
 
 setInterval(createSnowflake, 2000); // Tạo một tuyết rơi mới mỗi 2000ms
+
+
+/** review **/
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+
+})

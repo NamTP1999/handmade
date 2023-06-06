@@ -520,6 +520,7 @@ nav ul li a {
 #contact {
   height: auto;
   width: 100%;
+  background: #f7f7f7;
 }
 
 .contact-details {
@@ -574,7 +575,6 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #footer {
-  background: #f7f7f7;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -661,5 +661,124 @@ nav ul li a {
   }
   100% {
     transform: translateY(100vh);
+  }
+}
+
+/* review custom */
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');*/
+
+
+
+
+.board{
+  width: 100%;
+  background: #151c35;
+  text-align: center;
+  border-radius: 8px;
+  padding: 4em 0;
+}
+
+.text-light{
+  color: #ebebfb;
+}
+
+.swiper {
+  width: 600px;
+  height: auto;
+}
+
+.swiper .swiper-slide .flex{
+  margin: 3em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiper .swiper-slide .comments{
+  background-color: #ebebfb;
+  padding: 1.5em 2em;
+  width: 50%;
+  border-radius: 5px;
+  font-size: .9em;
+  position: relative;
+  color: black;
+}
+
+.swiper .swiper-slide .comments::after{
+  content: '';
+  position: absolute;
+  bottom: -19px;
+  left: 45%;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #ebebfb;
+  z-index: -99;
+}
+
+
+.swiper .profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.swiper .profile img{
+  width: 30%;
+  border-radius: 50%;
+  border: 5px solid #ee709d;
+  margin: 10px 0;
+}
+
+.swiper .profile > a{
+  text-decoration: none;
+  color: #ebebfb;
+}
+
+.swiper .profile > span{
+  color: #8297e2;
+  font-size: .8em;
+}
+
+.swiper .swiper-button-prev, .swiper-button-next{
+  color: #8297e2;
+  display: none;
+}
+
+
+@media (min-width: 320px) {
+  .board{
+    width: auto;
+  }
+
+  .swiper {
+    width: 320px;
+  }
+
+  .board > h1, p{
+    padding: 0 2em;
+  }
+}
+
+@media (max-width: 766px) {
+  .swiper .swiper-button-next{
+    color: #8297e2;
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .board{
+    width: 100%;
+  }
+
+  .swiper {
+    width: 600px;
+  }
+
+  .swiper .swiper-button-prev, .swiper-button-next{
+    display: initial;
   }
 }
